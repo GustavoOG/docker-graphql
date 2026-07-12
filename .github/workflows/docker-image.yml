@@ -35,7 +35,7 @@ jobs:
 
 
     - name: Build Docker Image
-      env:         
+      env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
           docker build -t jdxtavo/docker-graphql:$NEW_VERSION .
