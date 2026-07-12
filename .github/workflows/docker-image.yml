@@ -26,11 +26,13 @@ jobs:
 
     - name: Build Docker Image
       run: |
-          docker build -t jdxtavo/docker-graphql:0.0.2 .   
+          docker build -t jdxtavo/docker-graphql:0.0.2 .
+          docker build -t jdxtavo/docker-graphql:latest .
 
     - name: Push Docker Image
       run: |
           docker push jdxtavo/docker-graphql:0.0.2
+          docker push jdxtavo/docker-graphql:latest
       
          
 
